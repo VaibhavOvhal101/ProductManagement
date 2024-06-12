@@ -142,6 +142,7 @@ export class ProductRecordsComponent {
     this.service.getProducts().subscribe((res) => {
     if(res && res.length){
       this.productData = res;
+      this.sortProducts();
       this.processData();
     }
     })
@@ -160,6 +161,9 @@ export class ProductRecordsComponent {
       name: key,
       value: categoryCountsMap[key]
     }));
+  }
+  sortProducts() {
+    this.productData.sort((a:any, b:any) => b.id - a.id);
   }
 
 }
