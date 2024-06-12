@@ -20,10 +20,10 @@ This is a Product Management application built with Angular and PrimeNG. The app
 
 1. **Clone the repository**:
     ```bash
-    git clone https://github.com/your-repo/product-management.git
+    git clone https://github.com/VaibhavOvhal101/ProductManagement.git
     cd product-management
     ```
-
+    
 2. **Install dependencies**:
     ```bash
     npm install
