@@ -1,27 +1,56 @@
-# ProductManagement
+# Product Management Application
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.5.
+This is a Product Management application built with Angular and PrimeNG. The application allows you to add, edit, and view products.
 
-## Development server
+## Table of Contents
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Dependencies](#dependencies)
+- [Project Structure](#project-structure)
+- [License](#license)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Features
+- Add new products with name, category, and price.
+- Display a list of products.
+- Edit existing products.
+- Validate product details with proper form validations.
 
-## Code scaffolding
+## Installation
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. **Clone the repository**:
+    ```bash
+    git clone https://github.com/your-repo/product-management.git
+    cd product-management
+    ```
 
-## Build
+2. **Install dependencies**:
+    ```bash
+    npm install
+    ```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+3. **Run JSON Server**:
+    ```bash
+    npx json-server --watch db.json
+    ```
 
-## Running unit tests
+4. **Start the application**:
+    ```bash
+    ng serve
+    ```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Usage
 
-## Running end-to-end tests
+1. Open your browser and navigate to `http://localhost:4200`.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+2. Use the form to add new products. Ensure to select a category from the dropdown (Furniture, Accessories, Electronics).
 
-## Further help
+3. View the list of products on the main page.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+4. Edit products by clicking on the edit button next to each product.
+
+## Dependencies
+
+- Angular
+- PrimeNG
+- JSON Server
