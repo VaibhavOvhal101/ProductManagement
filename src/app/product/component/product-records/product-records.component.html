@@ -16,18 +16,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-       
-      </ul>
-      <!-- <form class="d-flex" role="search">
-        <input
-          class="form-control me-2"
-          type="search"
-          placeholder="Search"
-          aria-label="Search"
-        />
-        <button class="btn btn-outline-light" type="submit">Search</button>
-      </form> -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
       <div class="rightIcon">
         <i class="bi bi-person"></i>
       </div>
@@ -36,104 +25,144 @@
 </nav>
 
 <!-- ---------------Sidebar ------------------->
-<div>
-  <div class="sidebar">
-    <ul class="sidebar-menu">
-      <li>
-        <a class="nav-link logo"> Products </a>
-      </li>
-      <li>
-        <a class="nav-link">
-          <span class="icon">
-            <i class="bi bi-house"></i>
-          </span>
-          Product Records
-        </a>
-      </li>
-    </ul>
-  </div>
-  \
+<>
+<div class="sidebar">
+  <ul class="sidebar-menu">
+    <li>
+      <a class="nav-link logo"> Products </a>
+    </li>
+    <li>
+      <a class="nav-link">
+        <span class="icon">
+          <i class="bi bi-house"></i>
+        </span>
+        Product Records
+      </a>
+    </li>
+  </ul>
+</div>
+\
 
-  <div class="table-container">
-    <div class="grid">
-      <div class="col-12">
-        <div class="card">
-          <h5>Product Data</h5>
-          <i class="pi pi-pencil"></i>
-          <p-table
-            [value]="productData"
-            dataKey="id"
-            [rows]="10"
-            [rowHover]="true"
-            styleClass="p-datatable-striped"
-            [paginator]="true"
-            responsiveLayout="scroll"
-          >
-            <ng-template pTemplate="caption">
-              <div class="flex justify-content-between">
-                <p-button
-                  label="Add New Product"
-                  severity="success"
-                  (click)="addNewProduct()"
-                ></p-button>
-              </div>
-            </ng-template>
-            <ng-template pTemplate="header">
-              <tr>
-                <th style="min-width: 10rem">
-                  <div class="flex justify-content-between align-items-center">
-                    Name
-                  </div>
-                </th>
-                <th style="min-width: 10rem">
-                  <div class="flex justify-content-between align-items-center">
-                     Category
-                  </div>
-                </th>
-                <th style="min-width: 10rem">
-                  <div class="flex justify-content-between align-items-center">
-                    Price
-                  </div>
-                </th>
-                
-                <th style="min-width: 8rem">
-                  <div class="flex justify-content-between align-items-center">
-                    Actions
-                  </div>
-                </th>
-                
-              </tr>
-            </ng-template>
-            <ng-template pTemplate="body" let-productData>
-              <tr>
-                <td>{{ productData.name }}</td>
-                <td>{{ productData.category }}</td>
-                <td>{{ productData.price }}</td>
-                <td class="text-center2 cursor">
-                  <i class="bi bi-pencil" (click)="setForm(productData)"></i>
-                  <i
-                    class="bi bi-trash"
-                    (click)="deleteConfirmation(productData)"
-                  ></i>
-                </td>
-                
-              </tr>
-            </ng-template>
-            <ng-template pTemplate="emptymessage">
-              <tr>
-                <td colspan="8">No products found.</td>
-              </tr>
-            </ng-template>
-            <ng-template pTemplate="loadingbody">
-              <tr>
-                <td colspan="8">Loading products data. Please wait.</td>
-              </tr>
-            </ng-template>
-          </p-table>
+<div class="table-container">
+  <p-tabView>
+    <p-tabPanel header="Records">
+      <div class="grid">
+        <div class="col-12">
+          <div class="card">
+            <h5>Product Data</h5>
+            <i class="pi pi-pencil"></i>
+            <p-table
+              [value]="productData"
+              dataKey="id"
+              [rows]="10"
+              [rowHover]="true"
+              styleClass="p-datatable-striped"
+              [paginator]="true"
+              responsiveLayout="scroll"
+            >
+              <ng-template pTemplate="caption">
+                <div class="flex justify-content-between">
+                  <p-button
+                    label="Add New Product"
+                    severity="success"
+                    (click)="addNewProduct()"
+                  ></p-button>
+                </div>
+              </ng-template>
+              <ng-template pTemplate="header">
+                <tr>
+                  <th style="min-width: 10rem">
+                    <div
+                      class="flex justify-content-between align-items-center"
+                    >
+                      Name
+                    </div>
+                  </th>
+                  <th style="min-width: 10rem">
+                    <div
+                      class="flex justify-content-between align-items-center"
+                    >
+                      Category
+                    </div>
+                  </th>
+                  <th style="min-width: 10rem">
+                    <div
+                      class="flex justify-content-between align-items-center"
+                    >
+                      Price
+                    </div>
+                  </th>
+
+                  <th style="min-width: 8rem">
+                    <div
+                      class="flex justify-content-between align-items-center"
+                    >
+                      Actions
+                    </div>
+                  </th>
+                </tr>
+              </ng-template>
+              <ng-template pTemplate="body" let-productData>
+                <tr>
+                  <td>{{ productData.name }}</td>
+                  <td>{{ productData.category }}</td>
+                  <td>{{ productData.price }}</td>
+                  <td class="text-center2 cursor">
+                    <i class="bi bi-pencil" (click)="setForm(productData)"></i>
+                    <i
+                      class="bi bi-trash"
+                      (click)="deleteConfirmation(productData)"
+                    ></i>
+                  </td>
+                </tr>
+              </ng-template>
+              <ng-template pTemplate="emptymessage">
+                <tr>
+                  <td colspan="8">No products found.</td>
+                </tr>
+              </ng-template>
+              <ng-template pTemplate="loadingbody">
+                <tr>
+                  <td colspan="8">Loading products data. Please wait.</td>
+                </tr>
+              </ng-template>
+            </p-table>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
+    </p-tabPanel>
+    <p-tabPanel header="Analytics">
+      
+        <div class="grid">
+          <div class="col-12">
+            <div class="card">
+              <div class="row">
+                <div
+                  class="col-lg-6 col-md-12 col-sm-12"
+                  style="margin: 0 auto; width: 50%"
+                >
+                  <div>
+                    <ngx-charts-bar-vertical
+                      [results]="categoryCounts"
+                      [scheme]="colorScheme"
+                      [gradient]="gradient"
+                      [xAxis]="showXAxis"
+                      [yAxis]="showYAxis"
+                      [legend]="showLegend"
+                      [showXAxisLabel]="showXAxisLabel"
+                      [showYAxisLabel]="showYAxisLabel"
+                      [xAxisLabel]="xAxisLabel"
+                      [yAxisLabel]="yAxisLabel"
+                    >
+                    </ngx-charts-bar-vertical>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </p-tabPanel>
+  </p-tabView>
 </div>
 
 <p-dialog
@@ -171,7 +200,8 @@
               [options]="categories"
               formControlName="category"
               placeholder="Select a Category"
-            ></p-dropdown><br />
+            ></p-dropdown
+            ><br />
             <small
               *ngIf="
                 productForm.controls['category'].invalid &&
@@ -182,7 +212,6 @@
               Category is required
             </small>
           </div>
-          
         </div>
         <div class="d-flex justify-content-center mb-4">
           <div class="input-container">
@@ -194,24 +223,24 @@
               formControlName="price"
             /><br />
             <small
-            *ngIf="
-              productForm.get('price')?.hasError('required') &&
-              productForm.get('price')?.touched
-            "
-            class="p-error"
-          >
-            Price is required
-          </small>
-          <small
-            *ngIf="
-              productForm.get('price')?.hasError('pattern') &&
-              !productForm.get('price')?.hasError('required') &&
-              productForm.get('price')?.touched
-            "
-            class="p-error"
-          >
-            Price must be a valid number
-          </small>
+              *ngIf="
+                productForm.get('price')?.hasError('required') &&
+                productForm.get('price')?.touched
+              "
+              class="p-error"
+            >
+              Price is required
+            </small>
+            <small
+              *ngIf="
+                productForm.get('price')?.hasError('pattern') &&
+                !productForm.get('price')?.hasError('required') &&
+                productForm.get('price')?.touched
+              "
+              class="p-error"
+            >
+              Price must be a valid number
+            </small>
           </div>
         </div>
 
@@ -234,8 +263,6 @@
     </div>
   </div>
 </p-dialog>
-
-
 
 <p-dialog
   header="Add Product"
@@ -276,7 +303,8 @@
               [options]="categories"
               formControlName="category"
               placeholder="Select a Category"
-            ></p-dropdown><br />
+            ></p-dropdown
+            ><br />
             <small
               *ngIf="
                 productForm.controls['category'].invalid &&
@@ -287,7 +315,6 @@
               Category is required
             </small>
           </div>
-          
         </div>
         <div class="d-flex justify-content-center mb-4">
           <div class="input-container">
@@ -299,27 +326,27 @@
               formControlName="price"
             /><br />
             <small
-            *ngIf="
-              productForm.get('price')?.hasError('required') &&
-              productForm.get('price')?.touched
-            "
-            class="p-error"
-          >
-            Price is required
-          </small>
-          <small
-            *ngIf="
-              productForm.get('price')?.hasError('pattern') &&
-              !productForm.get('price')?.hasError('required') &&
-              productForm.get('price')?.touched
-            "
-            class="p-error"
-          >
-            Price must be a valid number
-          </small>
+              *ngIf="
+                productForm.get('price')?.hasError('required') &&
+                productForm.get('price')?.touched
+              "
+              class="p-error"
+            >
+              Price is required
+            </small>
+            <small
+              *ngIf="
+                productForm.get('price')?.hasError('pattern') &&
+                !productForm.get('price')?.hasError('required') &&
+                productForm.get('price')?.touched
+              "
+              class="p-error"
+            >
+              Price must be a valid number
+            </small>
           </div>
         </div>
-       
+
         <div class="d-flex justify-content-center">
           <p-button
             type="submit"
@@ -364,31 +391,3 @@
     class="p-button-danger"
   ></button>
 </p-dialog>
-
-
-
-
-<div class="table-container">
-    <div class="grid">
-      <div class="col-12">
-        <div class="card">
-            <div class="row">
-                <div class="col-lg-6 col-md-12 col-sm-12" style="margin: 0 auto; width: 50%;">
-                  <div >
-                    <ngx-charts-bar-vertical
-                      [results]="categoryCounts"
-                      [scheme]="colorScheme"
-                      [gradient]="gradient"
-                      [xAxis]="showXAxis"
-                      [yAxis]="showYAxis"
-                      [legend]="showLegend"
-                      [showXAxisLabel]="showXAxisLabel"
-                      [showYAxisLabel]="showYAxisLabel"
-                      [xAxisLabel]="xAxisLabel"
-                      [yAxisLabel]="yAxisLabel">
-                    </ngx-charts-bar-vertical>
-                  </div>
-            </div>
-        </div>
-    </div>
-</div>

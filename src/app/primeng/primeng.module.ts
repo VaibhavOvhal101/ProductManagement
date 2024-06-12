@@ -7,6 +7,7 @@ import { DialogModule } from 'primeng/dialog';
 import { ToastModule } from 'primeng/toast';
 import { DropdownModule } from 'primeng/dropdown';
 import { FileUploadModule } from 'primeng/fileupload';
+import { TabViewModule } from 'primeng/tabview';
 
 
 
@@ -21,7 +22,8 @@ import { FileUploadModule } from 'primeng/fileupload';
     DialogModule,
     DropdownModule,
     ToastModule,
-    FileUploadModule
+    FileUploadModule,
+    TabViewModule
     
     
   ],
@@ -33,7 +35,8 @@ import { FileUploadModule } from 'primeng/fileupload';
     DialogModule,
     DropdownModule,
     ToastModule,
-    FileUploadModule
+    FileUploadModule,
+    TabViewModule
     
 
 
