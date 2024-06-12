@@ -1,0 +1,99 @@
+{
+  "products": [
+    {
+      "name": "Mobile",
+      "category": "Electronics",
+      "price": 15000,
+      "id": 1
+    },
+    {
+      "id": 2,
+      "name": "Headphones",
+      "category": "Accessories",
+      "price": 2000
+    },
+    {
+      "id": 3,
+      "name": "Laptop",
+      "category": "Electronics",
+      "price": 60000
+    },
+    {
+      "id": 4,
+      "name": "TV",
+      "category": "Electronics",
+      "price": 26000
+    },
+    {
+      "id": 5,
+      "name": "Watch",
+      "category": "Accessories",
+      "price": 26000
+    },
+    {
+      "id": 8,
+      "name": "Mobile Charger",
+      "category": "Accessories",
+      "price": 1200
+    },
+    {
+      "id": 9,
+      "name": "Mouse",
+      "category": "Accessories",
+      "price": 800
+    },
+    {
+      "id": 10,
+      "name": "Bookshelf",
+      "category": "Furniture",
+      "price": 5000
+    },
+    {
+      "id": 11,
+      "name": "Camera",
+      "category": "Electronics",
+      "price": 40000
+    },
+    {
+      "id": 12,
+      "name": "Mobile Case",
+      "category": "Accessories",
+      "price": 500
+    },
+    {
+      "id": 13,
+      "name": "Printer",
+      "category": "Electronics",
+      "price": 8000
+    },
+    {
+      "id": 14,
+      "name": "Bluetooth Speaker",
+      "category": "Accessories",
+      "price": 4000
+    },
+    {
+      "id": 15,
+      "name": "Tablet",
+      "category": "Electronics",
+      "price": 18000
+    },
+    {
+      "name": "Furniture",
+      "category": "Furniture",
+      "price": "1200",
+      "id": 16
+    },
+    {
+      "name": "Electronics",
+      "category": "Electronics",
+      "price": "1233",
+      "id": 17
+    }
+  ],
+  "counts": {
+    "Electronics": 6,
+    "Accessories": 7,
+    "Furniture": 2
+  }
+}
