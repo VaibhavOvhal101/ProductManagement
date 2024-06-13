@@ -83,12 +83,6 @@
       "category": "Furniture",
       "price": "1200",
       "id": 16
-    },
-    {
-      "name": "Electronics",
-      "category": "Electronics",
-      "price": "1233",
-      "id": 17
     }
   ],
   "counts": {
